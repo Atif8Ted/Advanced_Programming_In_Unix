@@ -49,7 +49,11 @@ int creat(const char *path, mode_t mode);
  syntax:
  off_t lseek(int fd, off_t offset, int whence);
  -- Returns new file offset if ok , -1 if error.
- 
+ * If whence is SEEK_SET, the file’s offset is set to offset bytes from the beginning of the file.
+ * If whence is SEEK_CUR, the file’s offset is set to its current value plus the offset. The offset can be positive or negative.
+ * If whence is SEEK_END, the file’s offset is set to the size of the file plus the offset. The offset can be positive or negative.
+
+
 
 
 
