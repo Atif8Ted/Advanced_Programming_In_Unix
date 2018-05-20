@@ -18,6 +18,13 @@ int main(){
         puts(buff);
     }
 
-    
+    //setting file position at end of the file.
+    int pos=lseek(fd,0,SEEK_END);
+    //setting file position to current position.
+    pos=lseek(fd,0,SEEK_CUR);
+
+    //it is even possibel to ask lseek to advance the pointer
+    //even after the EOF  Ex:
+    ret=lseek(fd,(off_t)1688,SEEK_END);
 
 }
