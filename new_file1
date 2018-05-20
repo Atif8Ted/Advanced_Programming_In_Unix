@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<sys/stat.h>
+#include<fcntl.h>
+
+int main(){
+    int fd;
+    fd=open("FILE_IO_FUNCTIONS.c",O_RDONLY);
+    if(fd<0){
+        perror("FILE_IO_FUNCTIONS");
+    }
+    else{
+        printf("Success");
+    }
+
+}   
